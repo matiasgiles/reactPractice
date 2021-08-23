@@ -1,6 +1,5 @@
 import React from "react";
 
-import {movies} from "../config/data";
 import {cardData} from "../config/data"
 import ContentRowMovies from "./ContentRowMovies"
 

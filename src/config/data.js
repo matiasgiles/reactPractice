@@ -68,3 +68,25 @@ export const cardData = [
 
 
 ]
+
+export const movieData = [
+
+    {
+        titulo: "Billy Elliot",
+        duracion: "123",
+        rating: "5",
+        genero: ["Drama", "Comedia"],
+        premios: "2"
+    },
+
+    {
+        titulo: "Alicia en el pais de las maravillas",
+        duracion: "142",
+        rating: "4.8",
+        genero: ["Drama", "Accion", "Comedia"],
+        premios: "3"
+    }
+
+
+
+];
