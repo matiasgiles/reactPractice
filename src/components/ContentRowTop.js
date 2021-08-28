@@ -3,8 +3,8 @@ import React from "react";
 import {cardData} from "../config/data"
 import ContentRowMovies from "./ContentRowMovies"
 import GenresInDb from "./GenresInDb"
-import mandalorian from "../assets/images/mandalorian.jpg"
-
+import {Route} from "react-router-dom"
+import LastMovieInDb from "./LastMovieInDb"
 
 
 
@@ -18,49 +18,34 @@ function ContentRowTop (){
 						<h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
 					</div>
 					<div className="row">
+
+					<Route exact path="/ContentRowMovies">
 				
 				{
-					cardData.map(card =>{
+					cardData.map((card, index) =>{
 						return (<ContentRowMovies
 							titulo= {card.titulo}
 							cifra= {card.cifra}
 							icono= {card.icono}
 							color= {card.color}
 							textColor= {card.textColor}
+							
 							/>
 						)
 					})
-				}	
+				}
+				</Route>
 			</div>
 
 					
-	
+				<Route path="/charts">
 					<div className="row">
 	
-						<div className="col-lg-6 mb-4">
-							<div className="card shadow mb-4">
-								<div className="card-header py-3">
-									<h5 className="m-0 font-weight-bold text-gray-800">Last movie in Data Base
-                                    </h5>
-								</div>
-								<div className="card-body">
-									<div className="text-center">
-										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" src={mandalorian} alt=" Star Wars - Mandalorian " />
-                                            
-									</div>
-
-
-
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
-									<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
-								</div>
-							</div>
-						</div>
-						
-
-						
-						<GenresInDb />
+				<LastMovieInDb />
+				<GenresInDb />
 					</div>
+					</Route>
+
 				</div>
 				
 		

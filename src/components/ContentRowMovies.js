@@ -25,11 +25,7 @@ import React from "react";
     )
 }
 
-ContentRowMovies.defaultProps = {
-    textColor:"warning",
-    titulo: "AUN NO HAY TITULO",
-    cifra: 0
-}
+
 
 
 

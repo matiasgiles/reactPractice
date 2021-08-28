@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Route} from "react-router-dom"
 import TopBar from "./TopBar"
 import ContentRowTop from "./ContentRowTop"
 import Footer from "./Footer"
@@ -13,8 +13,10 @@ function ContentWrapper (){
         <TopBar />
         <ContentRowTop />
         </div>
-        <TableContent />
+        <Route path="/table" component={TableContent} />
         <Footer />
+
+
 
 
 </div>

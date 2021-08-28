@@ -1,6 +1,9 @@
 import React from "react";
 import logo from "../assets/images/logo-DH.png"
 
+
+import {Route,Link} from "react-router-dom"
+
 function Sidebar (){
 
     return (
@@ -9,21 +12,21 @@ function Sidebar (){
 		<ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 		
-			<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+			<Link className="sidebar-brand d-flex align-items-center justify-content-center" to="/">
 				<div className="sidebar-brand-icon">
 					<img className="w-100" src={logo} alt="Digital House" />
                         
 				</div>
-			</a>
+			</Link>
 
 		
 			<hr className="sidebar-divider my-0"></hr>
 
 			
 			<li className="nav-item active">
-				<a className="nav-link" href="/">
+				<Link className="nav-link" to="/ContentWrapper">
 					<i className="fas fa-fw fa-tachometer-alt"></i>
-					<span>Dashboard - DH movies</span></a>
+					<span>Dashboard - DH movies</span></Link>
 			</li>
 
 			
@@ -34,24 +37,24 @@ function Sidebar (){
 
 		
 			<li className="nav-item">
-				<a className="nav-link collapsed" href="/">
+				<Link className="nav-link collapsed" to="/ContentRowMovies">
 					<i className="fas fa-fw fa-folder"></i>
 					<span>Pages</span>
-				</a>
+				</Link>
 			</li>
 
 		
 			<li className="nav-item">
-				<a className="nav-link" href="/">
+				<Link className="nav-link" to="/charts">
 					<i className="fas fa-fw fa-chart-area"></i>
-					<span>Charts</span></a>
+					<span>Charts</span></Link>
 			</li>
 
 		
 			<li className="nav-item">
-				<a className="nav-link" href="/">
+				<Link className="nav-link" to="/table">
 					<i className="fas fa-fw fa-table"></i>
-					<span>Tables</span></a>
+					<span>Tables</span></Link>
 			</li>
 
 			
